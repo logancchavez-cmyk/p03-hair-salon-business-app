@@ -1,7 +1,7 @@
 #### Project
 # Hair Salon Business App
 #### Team Projects Overview
-- This is a team project. Through GitHub Classroom you should have created a shared GitHub repository with your teammates. As long as you upload your finished code to that team repository, each team member will get credit. You will also need to fill out a peer review survey on Learning Suite to recieve credit (if you're in a team by yourself, you don't need to).
+- This is a team project. Through GitHub Classroom you should have created a shared GitHub repository with your teammates. As long as you upload your finished code to that team repository, each team member will get credit. You will also need to fill out [this peer review survey](https://forms.gle/wJoLugLVaFNYrCdE7) to recieve credit (if you're in a team by yourself, you don't need to).
 - I do not provide automated tests for projects. You will need to determine yourself whether the code meets the requirements provided in the rubric. It is important for you to be able to determine whether a program you write meets requirements (in the real world there won't be pre-written tests to tell you if you did your job right).
 #### Overview
 - For this project, assume a local hair salon, Incredible Cuts, asked your team to create an app prototype for them. Up until now, they've just been recording their business data manually. They provided you a sample of that data in the `starting_hair_salon_data.xlsx` file. They want you to create a tool that lets their customers check in, as well as give managers access to important data.
