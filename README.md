@@ -28,7 +28,7 @@
 - Part 2:
     - `pandas`
     - `sqlite3`
-    - import function you make in part 1
+    - import the `start_from_scratch` function you make in part 1
 - Part 3:
     - `random`
     - `datetime`
@@ -40,7 +40,9 @@
 
 ## Part 1: Create a database and classes with peewee
 - Write all your code for part 1 in the `p03_1_db_classes.py` file
-- Using `peewee`, create an SQLite database called `hair_salon.db`.
+- Using `peewee`, create an SQLite database called `hair_salon.db`. Since we will be including some foreign key constraints in one of the tables, write your SQLite connection like this:
+    - `db = SqliteDatabase('hair_salon.db', pragmas={'foreign_keys': 1})`
+    - pragmas are SQLite settings. This is setting it to follow the foreign key rules you set up.
 - Your database should contain 3 tables: `Customer`, `Stylist`, and `Appointment`.
     - This means in python you need to create 3 classes with those same names that inherit from the `peewee` class `Model`.
 - Eventually, in Part 2 of the project, you will fill the database with data from the provided Excel file. Part 2 is easier to do if you keep the column names you write now in part 1 consistent with the Excel file column names. Suggested column names are provided below, but if you want to use different column names, feel free.
@@ -65,9 +67,9 @@
     - `c_id`: ForeignKeyField, needs to reference `Customer`, call the backreference 'appointments'. set on_delete to be 'CASCADE'
     - `s_id`: ForeignKeyField, needs to reference `Stylist`, call the backreference 'appointments'. set on_delete to be 'CASCADE'
 - Include code to start from scratch (for convenience)
-    - I recommend pasting the code below at the bottom of your file. It shouldn't be part of any of your classes (meaning the def should be outdented all the way to the left). It will delete any tables you've made and recreate them.
-    - This way, if you ever need to make a change to your database (like if you misspelled a column name or something) you can just rerun this file and it will start the database from scratch.
-    - the `if __name__` portion of the code is telling python to only run the `start_from_scratch()` function if you are starting python from this file specifically. Feel free to look it up how `__name__` works if you're curious.
+    - Paste the code below at the bottom of your file. It shouldn't be part of any of your classes (meaning the def should be outdented all the way to the left). It will delete any tables you've made and recreate them.
+    - This way, if you ever need to make a change to your database (like if you misspelled a column name or something) you can just rerun this file and it will start the database from scratch. This is just easier
+    - the `if __name__` portion of the code is telling python to only run the `start_from_scratch()` function if you are starting python from this file specifically. We haven't used that very much in this class, so feel free to look it up how `__name__` works if you want to learn more about it.
 ```
 # This assumes you called your peewee sqlite database connection variable "db"
 def start_from_scratch(db_to_restart = db):
